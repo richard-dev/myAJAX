@@ -21,7 +21,12 @@ function loadData() {
     $body.append('<img class="bgimg" src="' + streetViewUrl + '">');
 
     // get nyt article headlines
-    
+    $.getJSON( "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + address, function ( data ) {
+        var items = []
+        $.each( data, function( key, val ) {
+            
+        });
+    });
 
     return false;
 };
