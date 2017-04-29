@@ -10,6 +10,7 @@ function loadData() {
     $wikiElem.text("");
     $nytElem.text("");
 
+    // get street view pic
     var streetStr = $('#street').val();
     var cityStr = $('#city').val();
     var address = streetStr + ', ' + cityStr;
@@ -18,6 +19,9 @@ function loadData() {
 
     var streetViewUrl = 'http://maps.googleapis.com/maps/api/streetview?size=1920x1200&location=' + address;
     $body.append('<img class="bgimg" src="' + streetViewUrl + '">');
+
+    // get nyt article headlines
+    
 
     return false;
 };
